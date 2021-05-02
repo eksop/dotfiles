@@ -13,9 +13,10 @@ A pretty, minimalistic and useful tmux configuration for local and remote usage.
 1. Install Homebrew (https://github.com/mxcl/homebrew)
 2. `brew install zsh`
 3. Install prezto (https://github.com/eksop/prezto)
-4. `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-5. Install iTerm2
-5. In iTerm2 preferences for your profile set:
+4. Install tmux plugin manager
+5. `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+6. Install iTerm2
+7. In iTerm2 preferences for your profile set:
 ```
 Character Encoding: Unicode (UTF-8)
 Report Terminal Type: xterm-256color
