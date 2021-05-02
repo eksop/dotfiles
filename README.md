@@ -1,6 +1,24 @@
 # dotfiles
 Collection of dotfiles
 
+```sh
+.
+├── alacritty
+├── gammastep
+├── gtk3
+├── mako
+├── oomox
+├── README.md
+├── shell
+├── sway
+├── systemd
+├── termite
+├── tmux
+├── waybar
+├── wofi
+└── zathura
+```
+
 To install these run:
 1. `git clone https://github.com/eksop/dotfiles ~/.dot`
 2. `cd ~/.dot`
