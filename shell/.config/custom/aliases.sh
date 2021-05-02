@@ -1,4 +1,5 @@
 alias path='echo -e ${PATH//:/\\n}'
+alias vim='nvim'
 
 alias lsgrep='ls -al --group-directories-first | grep -i'
 alias psgrep='ps -aef | grep -i'
