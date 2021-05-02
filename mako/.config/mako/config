@@ -1,0 +1,32 @@
+font=Fira Sans 11.0
+
+progress-color=over #303030
+layer=overlay
+icons=1
+max-icon-size=64
+margin=36,28
+padding=20
+width=300
+height=100
+icon-path=~/.icons/oomox-base16-pop
+
+## Base16 Pop
+# Author: Chris Kempson (http://chriskempson.com)
+#
+# You can use these variables anywhere in the mako configuration file.
+
+background-color=#202020
+text-color=#d0d0d0e6
+border-color=#000000e6
+border-size=3
+border-radius=8
+
+[urgency=low]
+#background-color=#202020CC
+#text-color=#00aabbcc
+#border-color=#eb008a
+
+[urgency=high]
+#background-color=#202020CC
+text-color=#f29333e6
+#border-color=#0e5a94

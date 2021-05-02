@@ -1,0 +1,327 @@
+// Global 
+{
+  "layer": "top",
+  "position": "top",
+  "height": 0,
+  "width": 0,
+  "margin-top": 0,
+  "margin-right": 0,
+  "margin-left": 0,
+  "margin-bottom": 0,
+  "modules-left": [
+    "custom/launcher",
+    "custom/right-arrow-dark",
+    "custom/separator",
+    "custom/left-arrow-dark",
+    "sway/workspaces",
+    "custom/right-arrow-dark"
+  ],
+  "modules-center": [
+    "custom/left-arrow-dark",
+    "sway/window",
+    "custom/right-arrow-dark"
+  ],
+  "modules-right": [
+    "custom/left-arrow-dark",
+    //"custom/recorder",
+    "cpu",
+    "memory",
+    "temperature",
+    "tray",
+    "idle_inhibitor",
+    //"network",
+    "network#vpn",
+    "pulseaudio",
+    //"custom/weather",
+    "battery",
+    "clock",
+    "custom/power",
+  ],
+
+  // Modules
+
+  "custom/recorder": {
+    "format": "",
+    "return-type": "json",
+    "interval": 4,
+    "exec": "echo '{\"class\": \"recording\"}'",
+    "exec-if": "pgrep wf-recorder"
+  },
+
+  "wlr/taskbar": {
+    "all-outputs": false,
+    "format": "{icon}",
+    "icon-theme": "Tela-black-dark",
+    "icon-size": 16,
+    "on-click": "activate",
+    "on-click-right": "minimize",
+    "on-click-middle": "close"
+  },
+  "custom/left-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+
+    }
+  },
+
+  "battery": {
+    "states": {
+      "full": 100,
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "interval": 30,
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "format": "{icon} {capacity}%"
+  },
+
+  "custom/PBPbattery": {
+    "exec": "~/.config/waybar/scripts/PBPbattery.sh",
+    "format": "{}",
+  },
+
+  "custom/separator": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "custom/separator-light": {
+    "format": " ",
+    "tooltip": false
+  },
+
+
+  "custom/separator-dark": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "custom/shutdown": {
+    "format": "",
+    "on-click": "~/.config/waybar/modules/shutdown.sh",
+    "tooltip": false
+  },
+  "custom/reboot": {
+    "format": "",
+    "on-click": "~/.config/waybar/modules/reboot.sh",
+    "tooltip": false
+  },
+  "custom/suspend": {
+    "format": "",
+    "on-click": "~/.config/waybar/modules/suspend.sh",
+    "tooltip": false
+  },
+
+  "clock": {
+    "interval": 10,
+    "format-alt": "{:%A %e, %B %Y}",
+    "format": "{:%H:%M}",
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "{usage}%",
+    "states": {
+      "good": 0,
+      "warning": 70,
+      "critical": 95
+    }
+  },
+
+  "custom/keyboard-layout": {
+    "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+    // Interval set only as a fallback, as the value is updated by signal
+    "interval": 30,
+    "format": "  {}", // Icon: keyboard
+    // Signal sent by Sway key binding (~/.config/sway/key-bindings)
+    "signal": 1, // SIGHUP
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/keyhint.sh",
+  },
+
+  "memory": {
+    "states": {
+      "good": 0,
+      "warning": 70,
+      "critical": 90
+    },
+    "interval": 5,
+    "format": "{}%"
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "ﲁ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "network#vpn": {
+    "interface": "wg0",
+    "format": "",
+    "format-disconnected": "⚠",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+  },
+
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "sway/window": {
+    "format": "  {}  ",
+    "max-length": 50,
+    "tooltip": false
+  },
+
+  "sway/workspaces": {
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "disable-scroll": true,
+    "disable-markup": false,
+    "all-outputs": true,
+    "format": "  {icon}  ",
+    //"format":"{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "urgent": "!",
+      "focused": "*",
+      "default": "#"
+    }
+  },
+
+  "custom/swap": {
+    "format": " {}",
+    "interval": 5,
+    "exec": "free -h | grep Swap | awk '{print $3}'"
+  },
+
+  "temperature": {
+    "format": "{temperatureC:2}°",
+    //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+    "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+    //"on-click": "terminator -e 'watch -n1 sensors'"
+    "on-click": "psensor"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1, // %, can be a float
+
+    "format": "{icon} {format_source}",
+    //"format-muted": " {format_source}",
+    "format-bluetooth": "{icon}  {format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+
+    "on-click": "pavucontrol",
+    "tooltip": false,
+
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "וֹ",
+      "headset": "  ",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-scroll-up": "pamixer -ui 2",
+    "on-scroll-down": "pamixer -ud 2",
+  },
+
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 1800,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "exec-if": "ping wttr.in -c1"
+    // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'",
+    //"on-click": "gnome-weather"
+  },
+
+  "tray": {
+    //"icon-size": 128,
+    "spacing": 7,
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""],
+    "on-scroll-down": "brightnessctl -c backlight set 5%",
+    "on-scroll-up": "brightnessctl -c backlight set +5%-"
+  },
+
+  "custom/firefox": {
+    "format": "",
+    "on-click": "exec firefox",
+    "tooltip": false
+  },
+
+  "custom/terminal": {
+    "format": " ",
+    "on-click": "exec alacritty",
+    "tooltip": false
+  },
+
+  "custom/files": {
+    "format": " ",
+    "on-click": "exec thunar",
+    "tooltip": false
+  },
+
+  "custom/launcher": {
+    "format": "  ",
+    "on-click": "exec wofi -c ~/.config/wofi/config -I",
+    "tooltip": false,
+  },
+
+  "custom/power": {
+    "format": "  ",
+    "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false,
+  },
+}
+

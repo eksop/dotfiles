@@ -1,0 +1,35 @@
+# Auth with polkit-gnome:
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Desktop notifications
+exec mako
+
+# Network Applet
+exec nm-applet --indicator
+
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+     
+# Welcome App
+exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
+
+# Dropbox
+exec ~/.dropbox-dist/dropboxd
+
+# Gammastep
+exec /usr/bin/gammastep-indicator -l 25.439345:81.759778
+
+# Sway Fader
+# exec python3 ~/.config/sway/scripts/swayfader.py      
+
+# udiskie
+exec udiskie --no-automount --tray
+
+# Autotiling
+exec autotiling
+
+# Clipman
+exec clipman restore
+exec wl-paste -t text --watch clipman store

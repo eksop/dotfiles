@@ -1,0 +1,10 @@
+hide_search=true
+hide_scroll=true
+show=dmenu
+width=10
+lines=5
+location=top_right
+content_halign=center
+x=-145
+y=-25
+layer=overlay

@@ -1,0 +1,246 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+/*
+*
+* Base16 Pop
+* Author: Chris Kempson (http://chriskempson.com)
+*
+*/
+
+@define-color base00 #000000;
+@define-color base01 #202020;
+@define-color base02 #303030;
+@define-color base03 #505050;
+@define-color base04 #b0b0b0;
+@define-color base05 #d0d0d0;
+@define-color base06 #e0e0e0;
+@define-color base07 #ffffff;
+@define-color base08 #eb008a;
+@define-color base09 #f29333;
+@define-color base0A #f8ca12;
+@define-color base0B #37b349;
+@define-color base0C #00aabb;
+@define-color base0D #0e5a94;
+@define-color base0E #b31e8d;
+@define-color base0F #7a2d00;
+
+/*
+* Other colors
+*/
+
+@define-color base10 #fb607f;
+
+
+@keyframes blink-warning {
+  /*50% {
+    color: @base05;
+  }*/
+
+  to {
+    color: @base03;
+  }
+}
+
+@keyframes blink-critical {
+  /*50% {
+    color: @base09;
+  }*/
+
+  to {
+    color: @base10;
+  }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+  font-size: 14px;
+  /*font-family: "JetBrains Mono NL";*/
+  font-family: "Noto Sans Mono";
+  font-weight: bold;
+  color: @base05;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0px;
+  padding: 0;
+}
+
+/* The whole bar */
+window#waybar {
+  background: rgba(0, 0, 0, 0.75);
+  color: @base00;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0;
+  padding: 0;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark,
+#custom-separator-dark {
+  color: @base00;
+  opacity: 0.9;
+  background: transparent;
+}
+
+/* Each module */
+#workspaces,
+#window,
+#battery,
+#clock,
+#backlight,
+#cpu,
+#disk,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#custom-weather,
+#custom-launcher,
+#custom-power,
+#custom-separator-dark,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#idle_inhibitor,
+#taskbar,
+#custom-PBPbattery {
+  padding: 0px 5px 0px 5px;
+  background: @base00;
+  opacity: 0.9;
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#workspaces {
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+  margin-left: 0px;
+}
+
+#workspaces button {
+  color: @base05;
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  border-radius: 0px;
+}
+
+#workspaces button.focused {
+  border-style: solid;
+  border-width: 2 0 2 0;
+  border-color: @base0B;
+  /*background: @base02;*/
+  border-radius: 0;
+  color: @base05;
+}
+
+#workspaces button.urgent {
+  border-color: @base09;
+  border-radius: 0;
+  color: @base05;
+}
+
+#cpu,
+#memory,
+#battery,
+#temperature {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#pulseaudio.muted {
+  color: @base03;
+}
+
+#battery.warning,
+#cpu.warning,
+#memory.warning,
+#network.disconnected {
+  color: @base05;
+}
+
+#battery.critical,
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+  color: @base09;
+}
+
+#battery.warning.discharging,
+#cpu.warning,
+#memory.warning,
+#temperature.warning {
+  animation-name: blink-warning;
+  animation-duration: 3s;
+}
+
+#battery.critical.discharging,
+#memory.critical,
+#cpu.critical,
+#temperature.critical {
+  animation-name: blink-critical;
+  animation-duration: 3s;
+}
+
+#mode {
+  color: @base09;
+}
+
+#pulseaudio {}
+
+#custom-launcher {
+  color: @base0C;
+}
+
+#taskbar,
+#tray,
+#window {
+  padding: 0;
+  margin: 0 0px 0 0px;
+}
+
+#taskbar {
+  margin-top: 0px;
+}
+
+#taskbar button {
+  color: @base05;
+  border-radius: 0px;
+  padding: 0px 3px 0px 3px;
+}
+
+#taskbar button.active {
+  border-style: dashed;
+  border-width: 2 0 0 0;
+  border-color: @base0C;
+  border-radius: 20;
+}
+
+#tray {
+  padding: 0 3px 0px 3px;
+}
+
+#custom-power {
+  color: @base0C;
+}
