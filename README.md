@@ -1,5 +1,5 @@
 # dotfiles
-Dotfiles
+Collection of dotfiles
 
 To install these run:
 - `git clone https://github.com/eksop/dotfiles ~/.dot`
@@ -7,10 +7,10 @@ To install these run:
 - `stow <dir-to-install>`
 
 
-## `stow tmux`
+## Module: tmux
+A pretty, minimalistic and useful tmux configuration for local and remote usage. 
 
 ### Installation
-
 1. Install Homebrew (https://github.com/mxcl/homebrew)
 2. `brew install zsh`
 3. Install prezto (https://github.com/eksop/prezto)
@@ -23,7 +23,6 @@ Report Terminal Type: xterm-256color
 ```
 
 ### Usage:
-
 Prefix is set to Ctrl-b (make sure you remapped Caps Lock to Ctrl)
 
 #### Shortcuts prefixed with Ctrl-b
