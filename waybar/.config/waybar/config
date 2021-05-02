@@ -32,6 +32,7 @@
     //"network",
     "network#vpn",
     "pulseaudio",
+    "backlight",
     //"custom/weather",
     "battery",
     "clock",
@@ -209,21 +210,16 @@
     "disable-scroll": true,
     "disable-markup": false,
     "all-outputs": true,
-    "format": "  {icon}  ",
-    //"format":"{icon}",
+    "format": "  {name}: {icon}  ",
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "urgent": "!",
-      "focused": "*",
-      "default": "#"
+      "1": "☰",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "focused": "",
+      "default": ""
     }
   },
 
@@ -288,10 +284,11 @@
   },
 
   "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", ""],
-    "on-scroll-down": "brightnessctl -c backlight set 5%",
-    "on-scroll-up": "brightnessctl -c backlight set +5%-"
+    "device": "amdgpu_bl0",
+    "format": "{icon}",
+    "format-icons": ["", ""]
+    //"on-scroll-down": "brightnessctl -c backlight set +5%",
+    //"on-scroll-up": "brightnessctl -c backlight set 5%-"
   },
 
   "custom/firefox": {
