@@ -210,7 +210,7 @@
     "disable-scroll": true,
     "disable-markup": false,
     "all-outputs": true,
-    "format": "  {name}: {icon}  ",
+    "format": "  {icon}  ",
     "format-icons": {
       "1": "☰",
       "2": "",
