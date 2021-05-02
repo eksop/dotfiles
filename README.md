@@ -4,7 +4,7 @@ Collection of dotfiles
 To install these run:
 1. `git clone https://github.com/eksop/dotfiles ~/.dot`
 2. `cd ~/.dot`
-3. `stow <dir-to-install>`
+3. `stow <module-to-install>`
 
 ## Module: tmux
 A pretty, minimalistic and useful tmux configuration for local and remote usage. 
