@@ -2,7 +2,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 35,
+  "height": 25,
   "width": 0,
   "margin-top": 0,
   "margin-right": 0,
@@ -137,7 +137,7 @@
 
   "clock": {
     "interval": 10,
-    "format-alt": "{:%A %e, %B %Y}",
+    //"format-alt": "{:%A %e, %B %Y}",
     "format": "{:%H:%M}",
   },
 
