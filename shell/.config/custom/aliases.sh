@@ -7,7 +7,7 @@ alias lsgrep='ls -al --group-directories-first | grep -i'
 alias psgrep='ps -aef | grep -i'
 
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias .g='/usr/bin/git --git-dir=$HOME/.dot/.git --work-tree=$HOME/.dot'
+alias .dot='/usr/bin/git --git-dir=$HOME/.dot/.git --work-tree=$HOME/.dot'
 type -p bat > /dev/null && alias cat='bat'
 
 alias docker="sudo docker"
