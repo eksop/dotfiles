@@ -157,6 +157,9 @@ exec swayidle -w\
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # toggle waybar
+    #bindsym $mod+n exec killall -SIGUSR1 waybar
 #
 # Scratchpad:
 #
@@ -237,11 +240,6 @@ bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 p
 #
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
-#
-# Keybindings List
-#
-   bindsym $mod+t exec xed ~/.config/sway/cheatsheet 
-
 
 bindsym $mod+Shift+t exec pkill -USR1 gammastep
 
@@ -252,4 +250,9 @@ bindsym $alt+space exec makoctl dismiss
 
 bindsym Shift+$alt+space exec makoctl dismiss --all
 
+
+bindsym $mod+tab exec swaymsg [con_id=$(swaymsg -t get_tree | ~/.config/sway/scripts/alttab.sh t)] focus  
+bindsym $mod+shift+tab exec swaymsg [con_id=$(swaymsg -t get_tree | ~/.config/sway/scripts/alttab.sh f)] focus
+
+bindsym $mod+t exec emacsclient --eval '(+org-capture/open-frame)'
 

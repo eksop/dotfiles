@@ -15,6 +15,7 @@ for_window [class="Yad" instance="yad"] floating enable
 for_window [app_id="yad"] floating enable
 for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 for_window [class="KeeWeb" instance="keeweb"] floating enable
+for_window [class="KeePassXC" instance="keepassxc"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [app_id="zoom"] floating enable
 for_window [app_id="imv"] floating enable

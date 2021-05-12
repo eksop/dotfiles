@@ -23,6 +23,7 @@
   ],
   "modules-right": [
     "custom/left-arrow-dark",
+    "custom/separator-dark",
     //"custom/recorder",
     "cpu",
     "memory",
@@ -234,7 +235,8 @@
     //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
     "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
     //"on-click": "terminator -e 'watch -n1 sensors'"
-    "on-click": "psensor"
+    "on-click": "psensor",
+    "critical-threshold": 60,
   },
 
   "pulseaudio": {
