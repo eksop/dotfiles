@@ -22,10 +22,22 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 ;;; Add to ~/.doom.d/config.el
-;;(setq doom-font (font-spec :family "JetBrains Mono NL" :size 14 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "JetBrains Mono NL") ; inherits `doom-font''s :size
-;;      doom-unicode-font (font-spec :family "JetBrains Mono NL" :size 14)
-;;      doom-big-font (font-spec :family "JetBrains Mono NL" :size 19))
+;; choose your own fonts, in a system dependant way
+
+(if (not (string-match "apple-darwin" system-configuration))
+    (setq doom-font (font-spec :family "JetBrains Mono NL" :size 15 :weight 'medium)
+          doom-variable-pitch-font (font-spec :family "JetBrains Mono NL") ; inherits `doom-font''s :size
+          doom-unicode-font (font-spec :family "JetBrains Mono NL" :size 15)
+          doom-big-font (font-spec :family "JetBrains Mono NL" :size 19)))
+
+;;    (progn
+;;      (set-face-font 'default "Source Code Pro-12")
+;;      (set-frame-font "Source Code Pro-12" nil t)
+;;      (add-to-list 'default-frame-alist '(font . "Source Code Pro-12")))
+;;  (progn
+;;    (set-face-font 'default "Source Code Pro-11")
+;;    (set-frame-font "Source Code Pro-11" nil t)
+;;    (add-to-list 'default-frame-alist '(font . "Source Code Pro-11"))))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the

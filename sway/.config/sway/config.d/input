@@ -13,6 +13,15 @@ input type:touchpad {
       accel_profile adaptive
 }
 
+input type:pointer {
+      dwt enabled
+      tap enabled
+      natural_scroll enabled
+      drag enabled
+      pointer_accel 0
+      accel_profile flat
+}
+
 # Read `man 5 sway-input` for more information about this section.
 #
 input type:keyboard {
