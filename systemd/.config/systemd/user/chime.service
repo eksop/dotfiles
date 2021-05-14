@@ -1,0 +1,12 @@
+[Unit]
+Description=Repeated clock chime
+Wants=chime.timer
+
+[Service]
+Type=oneshot
+StandardOutput=journal
+ExecStart=/home/rajats/.local/bin/chime
+
+[Install]
+WantedBy=default.target
+

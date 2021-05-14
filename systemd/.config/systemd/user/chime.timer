@@ -1,0 +1,12 @@
+[Unit]
+Description=Repeated clock chime timer
+Requires=chime.service
+
+[Timer]
+Unit=chime.service
+OnUnitInactiveSec=1m
+RandomizedDelaySec=1m
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
