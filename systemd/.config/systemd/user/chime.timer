@@ -4,9 +4,7 @@ Requires=chime.service
 
 [Timer]
 Unit=chime.service
-OnUnitInactiveSec=1m
-RandomizedDelaySec=1m
-AccuracySec=1s
+OnCalendar=*:0/30
 
 [Install]
 WantedBy=timers.target
