@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/rajats/.dot/sway/.config/sway/config.d'
 let g:netrw_dirhist_3='/home/rajats/workspace/nixet/nixet-docs/content/docs/frontend'
 let g:netrw_dirhist_2='/home/rajats/workspace/nixet/nixet-docs/content/docs'
 let g:netrw_dirhist_1='/home/rajats/.dot/git'

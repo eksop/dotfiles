@@ -21,6 +21,8 @@ set $base0F #7a2d00
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 
+seat seat0 xcursor_theme capitaine-cursors 32
+
 # Set inner/outer gaps
 gaps inner 0
 gaps outer 0
@@ -54,13 +56,13 @@ client.background       $base07
 
 set $gnome-schema org.gnome.desktop.interface
 
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-base16-pop'
-    gsettings set $gnome-schema icon-theme 'oomox-base16-pop'
-    gsettings set $gnome-schema cursor-theme 'Paper'
-    gsettings set $gnome-schema cursor-size '32'
-
-}
+#exec_always {
+#    gsettings set $gnome-schema gtk-theme 'oomox-base16-pop'
+#    gsettings set $gnome-schema icon-theme 'oomox-base16-pop'
+#    gsettings set $gnome-schema cursor-theme 'Paper'
+#    gsettings set $gnome-schema cursor-size '32'
+#
+#}
 
 #
 # Status Bar:
