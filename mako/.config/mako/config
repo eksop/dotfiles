@@ -8,25 +8,23 @@ margin=36,28
 padding=20
 width=300
 height=100
-icon-path=~/.icons/oomox-base16-pop
+icon-path=/home/rajats/.local/share/sunpaper
 
-## Base16 Pop
-# Author: Chris Kempson (http://chriskempson.com)
+## Base16 One Light
+# Author: Daniel Pfeifer (http://github.com/purpleKarrot)
 #
 # You can use these variables anywhere in the mako configuration file.
 
-background-color=#202020
-text-color=#d0d0d0e6
-border-color=#000000e6
-border-size=3
-border-radius=8
+background-color=#fafafa
+text-color=#383a42
+border-color=#4078f2
 
 [urgency=low]
-#background-color=#202020CC
-#text-color=#00aabbcc
-#border-color=#eb008a
+background-color=#fafafa
+text-color=#c18401
+border-color=#4078f2
 
 [urgency=high]
-#background-color=#202020CC
-text-color=#f29333e6
-#border-color=#0e5a94
+background-color=#fafafa
+text-color=#ca1243
+border-color=#4078f2

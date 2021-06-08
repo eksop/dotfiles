@@ -10,9 +10,9 @@
   "margin-bottom": 0,
   "modules-left": [
     "custom/launcher",
-    "custom/right-arrow-dark",
-    "custom/separator",
-    "custom/left-arrow-dark",
+    //"custom/right-arrow-dark",
+    //"custom/separator",
+    //"custom/left-arrow-dark",
     "sway/workspaces",
     "custom/right-arrow-dark"
   ],
@@ -236,7 +236,7 @@
     "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
     //"on-click": "terminator -e 'watch -n1 sensors'"
     "on-click": "psensor",
-    "critical-threshold": 60,
+    "critical-threshold": 55,
   },
 
   "pulseaudio": {
@@ -312,7 +312,7 @@
   },
 
   "custom/launcher": {
-    "format": "  ",
+    "format": "   ",
     "on-click": "exec wofi -c ~/.config/wofi/config -I",
     "tooltip": false,
   },

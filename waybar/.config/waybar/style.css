@@ -12,27 +12,27 @@
 
 /*
 *
-* Base16 Pop
-* Author: Chris Kempson (http://chriskempson.com)
+* Base16 One Light
+* Author: Daniel Pfeifer (http://github.com/purpleKarrot)
 *
 */
 
-@define-color base00 #000000;
-@define-color base01 #202020;
-@define-color base02 #303030;
-@define-color base03 #505050;
-@define-color base04 #b0b0b0;
-@define-color base05 #d0d0d0;
-@define-color base06 #e0e0e0;
-@define-color base07 #ffffff;
-@define-color base08 #eb008a;
-@define-color base09 #f29333;
-@define-color base0A #f8ca12;
-@define-color base0B #37b349;
-@define-color base0C #00aabb;
-@define-color base0D #0e5a94;
-@define-color base0E #b31e8d;
-@define-color base0F #7a2d00;
+@define-color base00 #fafafa;
+@define-color base01 #f0f0f1;
+@define-color base02 #e5e5e6;
+@define-color base03 #a0a1a7;
+@define-color base04 #696c77;
+@define-color base05 #383a42;
+@define-color base06 #202227;
+@define-color base07 #090a0b;
+@define-color base08 #ca1243;
+@define-color base09 #d75f00;
+@define-color base0A #c18401;
+@define-color base0B #50a14f;
+@define-color base0C #0184bc;
+@define-color base0D #4078f2;
+@define-color base0E #a626a4;
+@define-color base0F #986801;
 
 /*
 * Other colors
@@ -40,6 +40,7 @@
 
 @define-color base10 #fb607f;
 
+@define-color base3 #5294e2;
 
 @keyframes blink-warning {
   /*50% {
@@ -82,8 +83,8 @@
 
 /* The whole bar */
 window#waybar {
-  background: rgba(0, 0, 0, 0.75);
-  color: @base00;
+  background: @base02;
+  color: @base05;
 }
 
 .modules-left,
@@ -97,7 +98,7 @@ window#waybar {
 #custom-left-arrow-dark,
 #custom-separator-dark {
   color: @base00;
-  opacity: 0.9;
+  opacity: 1;
   background: transparent;
 }
 
@@ -125,7 +126,7 @@ window#waybar {
 #custom-PBPbattery {
   padding: 0px 5px 0px 5px;
   background: @base00;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* -----------------------------------------------------------------------------
@@ -148,7 +149,7 @@ window#waybar {
 #workspaces button.focused {
   border-style: solid;
   border-width: 2 0 2 0;
-  border-color: @base0B;
+  border-color: @base3;
   /*background: @base02;*/
   border-radius: 0;
   color: @base05;
@@ -210,7 +211,7 @@ window#waybar {
 #pulseaudio {}
 
 #custom-launcher {
-  color: @base0C;
+  color: @base3;
 }
 
 #taskbar,
@@ -233,7 +234,7 @@ window#waybar {
 #taskbar button.active {
   border-style: dashed;
   border-width: 2 0 0 0;
-  border-color: @base0C;
+  border-color: @base3;
   border-radius: 20;
 }
 
@@ -242,5 +243,17 @@ window#waybar {
 }
 
 #custom-power {
-  color: @base0C;
+  color: @base3;
 }
+
+tooltip {
+  color: @base05;
+  background-color: @base00;
+  text-shadow: none;
+}
+
+tooltip * {
+  color: @base05;
+  text-shadow: none;
+}
+

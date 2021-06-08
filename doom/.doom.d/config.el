@@ -25,7 +25,7 @@
 ;; choose your own fonts, in a system dependant way
 
 (if (not (string-match "apple-darwin" system-configuration))
-    (setq doom-font (font-spec :family "JetBrains Mono NL" :size 15 :weight 'medium)
+    (setq doom-font (font-spec :family "JetBrains Mono NL" :size 13 :weight 'medium)
           doom-variable-pitch-font (font-spec :family "JetBrains Mono NL") ; inherits `doom-font''s :size
           doom-unicode-font (font-spec :family "JetBrains Mono NL" :size 15)
           doom-big-font (font-spec :family "JetBrains Mono NL" :size 19)))

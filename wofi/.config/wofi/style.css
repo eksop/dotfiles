@@ -1,37 +1,33 @@
-/* base16-wofi (https://sr.ht/~knezi/base16-wofi)
- * Base16 wofi template by knezi
- * Pop scheme by Chris Kempson (http://chriskempson.com) */
-
 window {
-	background-color: #202020;
-	color: #d0d0d0;
+        background-color: #fafafa;
+        color: #383a42;
 }
 
 #entry:nth-child(odd) {
-	background-color: #202020;
+        background-color: #fafafa;
 }
 
 #entry:nth-child(even) {
-	background-color: #303030;
+        background-color: #f0f0f1;
 }
 
 #entry:selected {
-	background-color: #000000;
+        background-color: #5294e2;
 }
 
 #input {
-	background-color: #202020;
-	color: #d0d0d0;
-	border-color: #202020; 
+        background-color: #f0f0f1;
+        color: #696c77;
+        border-color: #e5e5e6;
 }
 
 #input:focus {
-	border-color: #37b349; 
+        border-color: #c18401;
 }
 
 *{
     font-family: JetBrains Mono NL;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     padding: 1px;
 }
@@ -39,7 +35,3 @@ window {
 #scroll {
 }
 
-#text:selected {
-	color: #00aabb;
-	background-color: #202020;
-}

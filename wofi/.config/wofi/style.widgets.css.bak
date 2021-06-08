@@ -1,54 +1,46 @@
-/*
-Arc-Dark Color Scheme
-*/
+/* base16-wofi (https://sr.ht/~knezi/base16-wofi)
+ * Base16 wofi template by knezi
+ * Pop scheme by Chris Kempson (http://chriskempson.com) */
 
-@define-color highlight #5294e2;
-@define-color base1  #404552;
-@define-color base2  #40455;
-@define-color base3  #4b5160;
+window {
+	background-color: #202020;
+        background: transparent;
+	color: #d0d0d0;
+}
 
+#entry:nth-child(odd) {
+	background-color: #202020;
+}
+
+#entry:nth-child(even) {
+	background-color: #303030;
+}
+
+#entry:selected {
+	background-color: #000000;
+}
+
+#input {
+	background-color: #202020;
+	color: #d0d0d0;
+	border-color: #202020; 
+}
+
+#input:focus {
+	border-color: #37b349; 
+}
 
 *{
-    font-family: UbuntuMono;
-}
-
-#window {
-	  border: 1px solid @highlight;
-    margin: 0px 5px 0px 5px;
-
-}
-
-#inner-box {
-    background-color: @base2;
-
-}
-
-#outer-box {
-  margin: 5px;
-  padding:10px;
-  background-color: @base2;
-	margin-top: -22px;
+    font-family: JetBrains Mono NL;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 1px;
 }
 
 #scroll {
 }
 
-#text {
-padding: 5px;
-color: white;
-}
-
-#entry:nth-child(even){
-    background-color: @base1;
-}
-
-#entry {
-    background-color: @base3;
-}
-
-#entry:selected {
-    background-color: @highlight;
-}
-
 #text:selected {
+	color: #00aabb;
+	background-color: #202020;
 }
