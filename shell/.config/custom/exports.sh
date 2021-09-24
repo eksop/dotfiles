@@ -18,6 +18,7 @@ fi
 
 # macOS
 [[ -s ~/.fzf.zsh ]] && source ~/.fzf.zsh
+[[ -s /opt/local/share/fzf/shell/key-bindings.zsh ]] && source /opt/local/share/fzf/shell/key-bindings.zsh
 
 # linux
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
