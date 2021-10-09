@@ -4,14 +4,14 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/rajats/.local/share/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/rajat/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/home/rajats/.local/share/dein')
+call dein#begin('/home/rajat/.cache/dein')
 
 " Let dein manage dein
 " Required:
-call dein#add('/home/rajats/.local/share/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('/home/rajat/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
 call dein#add('vim-airline/vim-airline')

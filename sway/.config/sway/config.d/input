@@ -18,7 +18,7 @@ input type:pointer {
       tap enabled
       natural_scroll enabled
       drag enabled
-      pointer_accel 0
+      pointer_accel -0.75
       accel_profile flat
 }
 

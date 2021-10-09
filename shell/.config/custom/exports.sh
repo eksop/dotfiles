@@ -15,6 +15,7 @@ else
 fi
 
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
+[[ -d "$HOME/.cargo/bin" ]] && export PATH="$PATH:$HOME/.cargo/bin"
 
 # macOS
 [[ -s ~/.fzf.zsh ]] && source ~/.fzf.zsh
@@ -76,4 +77,7 @@ export GDK_BACKEND=wayland
 export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 export WLR_NO_HARDWARE_CURSORS=1
+
+eval "$(starship init zsh)"
+eval "$(mcfly init zsh)"
 
