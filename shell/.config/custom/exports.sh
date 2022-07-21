@@ -18,12 +18,14 @@ fi
 [[ -d "$HOME/.cargo/bin" ]] && export PATH="$PATH:$HOME/.cargo/bin"
 
 # macOS
-[[ -s ~/.fzf.zsh ]] && source ~/.fzf.zsh
-[[ -s /opt/local/share/fzf/shell/key-bindings.zsh ]] && source /opt/local/share/fzf/shell/key-bindings.zsh
+#[[ -s ~/.fzf.zsh ]] && source ~/.fzf.zsh
+#[[ -s /opt/local/share/fzf/shell/key-bindings.zsh ]] && source /opt/local/share/fzf/shell/key-bindings.zsh
 
 # linux
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+#[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+#[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -36,6 +38,7 @@ fi
 [[ -d "$HOME/.nvm" ]] && export NVM_DIR="$HOME/.nvm"
 [[ -d "/usr/local/lib/node_modules" ]] && export NODE_PATH=/usr/local/lib/node_modules
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## PHP support
 [[ -s $HOME/.phpbrew/bashrc ]] && source $HOME/.phpbrew/bashrc
@@ -80,4 +83,13 @@ export WLR_NO_HARDWARE_CURSORS=1
 
 eval "$(starship init zsh)"
 eval "$(mcfly init zsh)"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export PATH="/home/rajat/.local/share/solana/install/active_release/bin:$PATH"
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 

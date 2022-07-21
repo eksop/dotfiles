@@ -4,14 +4,14 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/rajat/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/rajat/.local/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/home/rajat/.cache/dein')
+call dein#begin('/home/rajat/.local/dein')
 
 " Let dein manage dein
 " Required:
-call dein#add('/home/rajat/.cache/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('/home/rajat/.local/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
 call dein#add('vim-airline/vim-airline')
@@ -57,9 +57,9 @@ filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
+if dein#check_install()
+  call dein#install()
+endif
 
 if exists('g:loaded_sensible') || &compatible
   finish
