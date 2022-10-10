@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="2"/>
+    <value type="int" value="3"/>
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="false"/>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=6;x=384;y=14"/>
+      <property name="size" type="uint" value="28"/>
+      <property name="length-adjust" type="bool" value="false"/>
+      <property name="length" type="uint" value="40"/>
+      <property name="icon-size" type="uint" value="20"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="51"/>
+        <value type="int" value="43"/>
+        <value type="int" value="44"/>
+        <value type="int" value="52"/>
+        <value type="int" value="42"/>
+        <value type="int" value="48"/>
+        <value type="int" value="55"/>
+      </property>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="1"/>
+    </property>
+    <property name="panel-3" type="empty">
+      <property name="position" type="string" value="p=9;x=958;y=15"/>
+      <property name="size" type="uint" value="28"/>
+      <property name="length" type="uint" value="20"/>
+      <property name="length-adjust" type="bool" value="false"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="56"/>
+        <value type="int" value="59"/>
+        <value type="int" value="57"/>
+      </property>
+      <property name="icon-size" type="uint" value="20"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="background-style" type="uint" value="1"/>
+    </property>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=2;x=1533;y=15"/>
+      <property name="size" type="uint" value="28"/>
+      <property name="length-adjust" type="bool" value="false"/>
+      <property name="length" type="uint" value="40"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="icon-size" type="uint" value="16"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="14"/>
+        <value type="int" value="15"/>
+        <value type="int" value="16"/>
+        <value type="int" value="2"/>
+        <value type="int" value="10"/>
+        <value type="int" value="9"/>
+        <value type="int" value="18"/>
+        <value type="int" value="11"/>
+        <value type="int" value="23"/>
+        <value type="int" value="12"/>
+        <value type="int" value="8"/>
+        <value type="int" value="17"/>
+        <value type="int" value="13"/>
+      </property>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="clipman" type="empty">
+      <property name="tweaks" type="empty">
+        <property name="popup-at-pointer" type="bool" value="true"/>
+      </property>
+    </property>
+    <property name="plugin-42" type="string" value="separator">
+      <property name="style" type="uint" value="2"/>
+    </property>
+    <property name="plugin-43" type="string" value="whiskermenu"/>
+    <property name="plugin-44" type="string" value="separator">
+      <property name="style" type="uint" value="2"/>
+    </property>
+    <property name="plugin-48" type="string" value="appmenu">
+      <property name="plugins" type="empty">
+        <property name="plugin-48" type="empty">
+          <property name="compact-mode" type="bool" value="false"/>
+          <property name="bold-application-name" type="bool" value="false"/>
+          <property name="expand" type="bool" value="false"/>
+        </property>
+      </property>
+    </property>
+    <property name="plugin-51" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-52" type="string" value="directorymenu">
+      <property name="base-directory" type="string" value="/home/rajat/Workspace"/>
+      <property name="new-folder" type="bool" value="false"/>
+      <property name="new-document" type="bool" value="false"/>
+      <property name="icon-name" type="string" value="folder-visiting"/>
+    </property>
+    <property name="plugin-55" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-56" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-57" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-59" type="string" value="tasklist">
+      <property name="show-labels" type="bool" value="true"/>
+      <property name="flat-buttons" type="bool" value="true"/>
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="true"/>
+      <property name="show-only-minimized" type="bool" value="false"/>
+      <property name="grouping" type="uint" value="1"/>
+      <property name="show-wireframes" type="bool" value="false"/>
+      <property name="window-scrolling" type="bool" value="false"/>
+    </property>
+    <property name="plugin-1" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-8" type="string" value="separator">
+      <property name="style" type="uint" value="2"/>
+    </property>
+    <property name="plugin-9" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-10" type="string" value="separator">
+      <property name="style" type="uint" value="2"/>
+    </property>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-12" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="systray">
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="thunar"/>
+        <value type="string" value="mullvad-gui"/>
+        <value type="string" value="discord"/>
+        <value type="string" value="redshift-gtk"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="clipman"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="dropbox-client-4139"/>
+        <value type="string" value="dropbox-client-4986"/>
+        <value type="string" value="dropbox-client-3989"/>
+        <value type="string" value="dropbox-client-3935"/>
+        <value type="string" value="dropbox-client-5828"/>
+        <value type="string" value="dropbox-client-3956"/>
+        <value type="string" value="dropbox-client-4807"/>
+        <value type="string" value="dropbox-client-4172"/>
+        <value type="string" value="dropbox-client-5321"/>
+        <value type="string" value="dropbox-client-3953"/>
+        <value type="string" value="dropbox-client-3930"/>
+        <value type="string" value="dropbox-client-72806"/>
+        <value type="string" value="dropbox-client-3987"/>
+        <value type="string" value="dropbox-client-125463"/>
+        <value type="string" value="dropbox-client-4008"/>
+        <value type="string" value="dropbox-client-5504"/>
+        <value type="string" value="dropbox-client-3961"/>
+        <value type="string" value="dropbox-client-4015"/>
+        <value type="string" value="dropbox-client-274918"/>
+        <value type="string" value="dropbox-client-4003"/>
+        <value type="string" value="dropbox-client-3942"/>
+        <value type="string" value="dropbox-client-3964"/>
+        <value type="string" value="dropbox-client-219302"/>
+        <value type="string" value="dropbox-client-4412"/>
+        <value type="string" value="dropbox-client-4305"/>
+        <value type="string" value="dropbox-client-3948"/>
+        <value type="string" value="dropbox-client-51158"/>
+        <value type="string" value="dropbox-client-50214"/>
+        <value type="string" value="zoom"/>
+        <value type="string" value="mx-usb-unmounter"/>
+        <value type="string" value="apt-notifier.py"/>
+        <value type="string" value="redshift"/>
+        <value type="string" value="blueman"/>
+      </property>
+      <property name="icon-size" type="int" value="24"/>
+      <property name="single-row" type="bool" value="true"/>
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="hidden-legacy-items" type="array">
+        <value type="string" value="discord"/>
+      </property>
+    </property>
+    <property name="plugin-15" type="string" value="power-manager-plugin"/>
+    <property name="plugin-16" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="chromium.instance148207;chromium.instance17261;chromium.instance18367;chromium.instance2;chromium.instance27236;chromium.instance408179;chromium.instance5797;chromium.instance8354;firefox.instance10517;firefox.instance117268;firefox.instance136501;firefox.instance14254;firefox.instance152934;firefox.instance156476;firefox.instance219804;firefox.instance229190;firefox.instance30290;firefox.instance347395;firefox.instance4055;firefox.instance4093;firefox.instance4240;firefox.instance42744;firefox.instance4370;firefox.instance475352;firefox.instance48099;firefox.instance4855;firefox.instance49314;firefox.instance4937;firefox.instance5035;firefox.instance504428;firefox.instance5071;firefox.instance515006;firefox.instance5525;firefox.instance5724;firefox.instance6888;firefox.instance72507;firefox.instance7456;firefox.instance838802;firefox.instance97118;io.github.celluloid_player.Celluloid.instance-1"/>
+    </property>
+    <property name="plugin-17" type="string" value="actions">
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-hybrid-sleep"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+      <property name="appearance" type="uint" value="0"/>
+    </property>
+    <property name="plugin-18" type="string" value="datetime"/>
+    <property name="plugin-23" type="string" value="genmon"/>
+    <property name="plugin-2" type="string" value="notification-plugin"/>
+  </property>
+  <property name="clipman" type="empty">
+    <property name="tweaks" type="empty">
+      <property name="never-confirm-history-clear" type="bool" value="false"/>
+    </property>
+  </property>
+</channel>

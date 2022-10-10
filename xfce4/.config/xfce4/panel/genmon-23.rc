@@ -1,0 +1,6 @@
+Command=whoami
+UseLabel=0
+Text=(genmon)
+UpdatePeriod=3600000
+Font=Noto Sans Bold 11
+
