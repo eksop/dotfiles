@@ -2,6 +2,6 @@ __file_function=$HOME/.config/custom/functions.sh
 __file_alias=$HOME/.config/custom/aliases.sh
 __file_export=$HOME/.config/custom/exports.sh
 
+[[ -a "$__file_export" ]] && source "$__file_export:A"
 [[ -a "$__file_function" ]] && source "$__file_function:A"
 [[ -a "$__file_alias" ]] && source "$__file_alias:A"
-[[ -a "$__file_export" ]] && source "$__file_export:A"

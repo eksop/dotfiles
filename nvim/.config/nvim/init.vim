@@ -16,36 +16,35 @@ call dein#add('/home/rajat/.local/dein/repos/github.com/Shougo/dein.vim')
 " Add or remove your plugins here like this:
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-let g:airline_theme='base16_pop'
+let g:airline_theme='base16_one-light'
 
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('tpope/vim-fugitive')
-call dein#add('tpope/vim-sleuth')
-call dein#add('tpope/vim-repeat')
-call dein#add('tpope/vim-surround')
+" call dein#add('Shougo/neosnippet.vim')
+" call dein#add('Shougo/neosnippet-snippets')
+" call dein#add('tpope/vim-fugitive')
+" call dein#add('tpope/vim-sleuth')
+" call dein#add('tpope/vim-repeat')
+" call dein#add('tpope/vim-surround')
 " call dein#add('tpope/vim-replace')
 
-call dein#add('fatih/vim-go')
-call dein#add('ctrlpvim/ctrlp.vim')
-
+" call dein#add('fatih/vim-go')
+" call dein#add('ctrlpvim/ctrlp.vim')
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " ./install --all so the interactive script doesn't block
 " you can check the other command line options  in the install file
-call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
-call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+" call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
+" call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
-call dein#add('Shougo/deoplete.nvim')
+" call dein#add('Shougo/deoplete.nvim')
 
-call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': 'bash install.sh'})
+" call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': 'bash install.sh'})
 
-if !has('nvim')
-  call dein#add('roxma/nvim-yarp')
-  call dein#add('roxma/vim-hug-neovim-rpc')
-endif
+" if !has('nvim')
+"   call dein#add('roxma/nvim-yarp')
+"   call dein#add('roxma/vim-hug-neovim-rpc')
+" endif
 
 let g:deoplete#enable_at_startup = 1
 
@@ -170,7 +169,6 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> <F3> :call LanguageClient#textDocument_references()<CR>
 nnoremap <silent> <F3> :call LanguageClient_contextMenu()<CR>
-
 
 nnoremap / /\v
 vnoremap / /\v

@@ -14,8 +14,12 @@ else
   export EDITOR='vim'
 fi
 
+# Include local user bin dir
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
+
+
 [[ -d "$HOME/.cargo/bin" ]] && export PATH="$PATH:$HOME/.cargo/bin"
+[[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 # macOS
 #[[ -s ~/.fzf.zsh ]] && source ~/.fzf.zsh
@@ -36,6 +40,7 @@ fi
 
 # Nodejs
 [[ -d "$HOME/.nvm" ]] && export NVM_DIR="$HOME/.nvm"
+[[ -d "$HOME/.config/nvm" ]] && export NVM_DIR="$HOME/.config/nvm"
 [[ -d "/usr/local/lib/node_modules" ]] && export NODE_PATH=/usr/local/lib/node_modules
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -50,22 +55,22 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export ANSIBLE_NOCOWS=1
 export BAT_THEME="TwoDark"
 
-command -v dircolors >/dev/null 2>&1 && \
+# Dircolors
+[[ $commands[dircolors] ]] && \
 eval "$(dircolors -p | \
     sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
     dircolors /dev/stdin)"
 
+# Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-    eval "$("$BASE16_SHELL/profile_helper.sh")"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        source "$BASE16_SHELL/profile_helper.sh"
 
 # macOS
 [[ -d /Library/Java/JavaVirtualMachines/openjdk15/Contents/Home ]] && export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk15/Contents/Home
 
-command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
-
-# linux
-export XDG_CURRENT_DESKTOP=sway
+[[ $commands[direnv] ]] && eval "$(direnv hook zsh)"
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
@@ -73,23 +78,17 @@ export PYTHONIOENCODING='UTF-8'
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
+[[ -s "$HOME/.config/broot/launcher/bash/br" ]] && source "$HOME/.config/broot/launcher/bash/br"
+
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+[[ $commands[starship] ]] && eval "$(starship init zsh)"
+[[ $commands[mcfly] ]] && eval "$(mcfly init zsh)"
 
-export MOZ_ENABLE_WAYLAND=1
-export GDK_BACKEND=wayland
-export XDG_CURRENT_DESKTOP=sway
-export XDG_SESSION_TYPE=wayland
-export WLR_NO_HARDWARE_CURSORS=1
-
-eval "$(starship init zsh)"
-eval "$(mcfly init zsh)"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-export PATH="/home/rajat/.local/share/solana/install/active_release/bin:$PATH"
+[[ -d "${KREW_ROOT:-$HOME/.krew}/bin" ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+[[ -d "$HOME/.pyenv" ]] && export PYENV_ROOT="$HOME/.pyenv"
+[[ -d "$HOME/.pyenv/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+[[ $commands[pyenv] ]] && eval "$(pyenv init -)"
 

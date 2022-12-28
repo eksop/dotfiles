@@ -13,4 +13,5 @@ fi
 # Customize to your needs...
 
 [[ -f "$HOME/.zshcustom" ]] && source $HOME/.zshcustom
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
